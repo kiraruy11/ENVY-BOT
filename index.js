@@ -20,7 +20,7 @@ const commands = [
     .setDescription("EnVy bot information")
 ].map(command => command.toJSON());
 
-const rest = new REST({ version: "10" }).setToken(TOKEN);
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 async function registerCommands() {
   try {
@@ -53,4 +53,4 @@ client.on("interactionCreate", async interaction => {
   }
 });
 
-client.login(TOKEN);
+client.login(process.env.DISCORD_TOKEN);
