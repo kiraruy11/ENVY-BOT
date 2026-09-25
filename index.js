@@ -38,7 +38,7 @@ async function registerCommands() {
 }
 
 client.once("ready", async () => {
-  console.log(Logged in as ${client.user.tag});
+  console.log(Logged as ${client.user.tag});
 
   await registerCommands();
 });
